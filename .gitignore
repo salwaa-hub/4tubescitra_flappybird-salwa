@@ -1,0 +1,23 @@
+# ========== Python Bytecode ==========
+__pycache__/
+*.pyc
+*.pyo
+
+# ========== Editor Settings ==========
+.vscode/
+.idea/
+
+# ========== OS Files ==========
+.DS_Store
+Thumbs.db
+
+# ========== Virtual Environment ==========
+venv/
+env/
+
+# ========== Logs / Cache ==========
+*.log
+*.tmp
+
+# ========== MediaPipe (optional cache) ==========
+mediapipe/
