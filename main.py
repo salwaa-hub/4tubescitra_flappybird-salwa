@@ -23,13 +23,13 @@ mp_face_mesh = mp.solutions.face_mesh
 pygame.init()
 pygame.mixer.init()
 
-pygame.mixer.music.load("sneaky-guitar-loop.mp3")
+pygame.mixer.music.load("assets/sneaky-guitar-loop.mp3")
 pygame.mixer.music.play(-1)
 
-sound_start = pygame.mixer.Sound("game-start.mp3")
-sound_point = pygame.mixer.Sound("point.mp3")
-sound_hit = pygame.mixer.Sound("punch-impact.mp3")
-sound_gameover = pygame.mixer.Sound("game-over.mp3")
+sound_start = pygame.mixer.Sound("assets/game-start.mp3")
+sound_point = pygame.mixer.Sound("assets/point.mp3")
+sound_hit = pygame.mixer.Sound("assets/punch-impact.mp3")
+sound_gameover = pygame.mixer.Sound("assets/game-over.mp3")
 sound_start.play()
 
 # ==== Webcam & Display ====
@@ -39,13 +39,13 @@ screen = pygame.display.set_mode(window_size)
 pygame.display.set_caption("Flippy Bird Face Control")
 
 # ==== Sprites ====
-bird_img = pygame.image.load("bird_sprite.png")
+bird_img = pygame.image.load("assets/bird_sprite.png")
 bird_img = pygame.transform.scale(bird_img, (bird_img.get_width() // 6, bird_img.get_height() // 6))
 bird_frame = bird_img.get_rect()
 bird_frame.center = (window_size[0] // 6, window_size[1] // 2)
 
 pipe_frames = deque()
-pipe_img = pygame.image.load("pipe_sprite_single.png")
+pipe_img = pygame.image.load("assets/pipe_sprite_single.png")
 pipe_starting_template = pipe_img.get_rect()
 
 # ==== Game State ====
@@ -64,7 +64,7 @@ game_is_running = True
 nose_y_history = deque(maxlen=5)
 
 # ==== Font ====
-font_path = "PressStart2P.ttf"
+font_path = "assets/PressStart2P.ttf"
 font = pygame.font.Font(font_path, 24)
 font_small = pygame.font.Font(font_path, 18)
 font_large = pygame.font.Font(font_path, 32)
